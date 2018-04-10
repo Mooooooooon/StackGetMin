@@ -20,8 +20,10 @@ void MinStack::push(int num)
 	std::cout << num << " added"<< std::endl;
 
 	if (idx == 0) {
-		mins[idx] = num;
-			 
+		mins[idx] = num;			 
+	}
+	else if (idx == length) {
+		std::cout << "Max reached" << std::endl;
 	}
 	else {
 		if (num < mins[idx - 1]) {
